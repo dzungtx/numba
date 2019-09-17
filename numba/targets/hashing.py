@@ -34,7 +34,8 @@ if _py34_or_later:
     _PyHASH_IMAG = _PyHASH_MULTIPLIER
     _PyLong_SHIFT = sys.int_info.bits_per_digit
     _Py_HASH_CUTOFF = sys.hash_info.cutoff
-    _Py_hashfunc_name = sys.hash_info.algorithm
+    # _Py_hashfunc_name = sys.hash_info.algorithm
+    _Py_hashfunc_name = "siphash24"
 else:
     _hash_width = types.intp.bitwidth
     _Py_hash_t = getattr(types, 'int%s' % _hash_width)
